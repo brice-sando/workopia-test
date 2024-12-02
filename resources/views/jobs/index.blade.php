@@ -1,9 +1,5 @@
-@extends('layout')
-
-@section('title')
-    Available Job Listings
-@endsection
-@section('content')
+<x-layout>
+    <x-slot name='title'>Available Job Listings</x-slot>
     <h1>Job List</h1>
     <ul>
         @forelse ($jobs as $job)
@@ -12,4 +8,4 @@
             <li>No data to display</li>
         @endforelse ($jobs as $job)
     </ul>
-@endsection
+</x-layout>
